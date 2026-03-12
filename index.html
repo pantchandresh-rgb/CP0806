@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="At-home healthcare services in India - Injections, IV drips, ECG tests, and nurse visits">
+    <title>HomeCare Health | Healthcare Services at Your Doorstep</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+	<a href="https://wa.me/919818185270" class="floating-whatsapp">
+	WhatsApp
+</a>
+<body>
+
+    <div class="emergency-bar">
+    <span>Need urgent medical help?</span>
+
+    <a href="tel:919818185270 class="call-btn">
+   Call Now
+   </a>
+
+   <a href="https://wa.me/919818185270" class="whatsapp-btn">
+   WhatsApp
+  </a>
+</div>		
+      <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>HomeCare Health</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/919818185270" class="btn btn-whatsapp-nav">
+                <i class="fab fa-whatsapp"></i>
+                <span>Book on WhatsApp</span>
+            </a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+ <!-- Hero Section -->
+
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <i class="fas fa-check-circle"></i>
+                <span>Certified Healthcare Professionals</span>
+            </div>
+
+            <h1 class="hero-title">
+                Home Healthcare Services at Your <span class="highlight">Doorstep</span>
+            </h1>
+
+            <ul class="hero-highlights">
+                <li><i class="fas fa-check-circle"></i> Certified nurses and healthcare professionals</li>
+                <li><i class="fas fa-check-circle"></i> Injection, IV Drip and ECG services at home</li>
+                <li><i class="fas fa-check-circle"></i> Blood Test and BP / Sugar monitoring</li>
+                <li><i class="fas fa-check-circle"></i> Physiotherapy and wound dressing care</li>
+                <li><i class="fas fa-check-circle"></i> Safe, hygienic and convenient home service</li>
+            </ul>
+
+            <div class="hero-buttons">
+                <a href="https://wa.me/919818185270?text=Hello%2C%20I%20want%20to%20book%20a%20home%20healthcare%20service" 
+		class="btn btn-primary"
+		target="_blank"	>
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Book on WhatsApp</span>
+                </a>
+
+                <a href="#services" class="btn btn-secondary">
+                    <span>View Services</span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <span class="stat-number">1500+</span>
+                        <span class="stat-label">Happy Patients</span>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <i class="fas fa-user-nurse"></i>
+                    <div>
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Certified Nurses</span>
+                    </div>
+                </div>
+
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600" alt="Healthcare at Home">
+        </div>
+    </div>
+</section>   
+
+ <!-- Services Section -->
+
+	<section class="price-estimator">
+
+	<div class="container">
+
+<h2 class="section-title">Instant Service Estimate</h2>
+<p class="section-subtitle">Check approximate service cost</p>
+
+<div class="estimator-box">
+
+<select id="estCity">
+<option>Select City</option>
+<option>Nainital</option>
+<option>Haldwani</option>
+<option>Rudrapur</option>
+<option>Delhi</option>
+<option>Noida</option>
+<option>Ghaziabad</option>
+</select>
+
+<select id="estService">
+<option value="">Select Service</option>
+<option value="300">Injection at Home</option>
+<option value="800">IV Drip</option>
+<option value="600">ECG Test</option>
+<option value="700">Physiotherapy</option>
+<option value="500">Blood Test Collection</option>
+<option value="450">Wound Dressing</option>
+</select>
+
+<select id="urgency">
+<option value="1">Normal</option>
+<option value="1.2">Same Day</option>
+<option value="1.5">Emergency</option>
+</select>
+
+<button onclick="calculatePrice()" class="btn btn-primary">
+Get Price
+</button>
+
+<h3 id="estimateResult"></h3>
+
+</div>
+
+</div>
+
+</section>
+
+	
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Home Healthcare Services</h2>
+                <p class="section-subtitle">Professional healthcare services delivered to your home</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h3>Injection at Home</h3>
+                    <p>Safe and hygienic injection administration by certified nurses at your convenience.</p>
+                    <div class="service-price">
+                        <span class="price">₹299</span>
+                        <span class="price-label">Starting</span>
+                    </div>
+                    <a href="#" class="btn btn-primary service-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        Book Now
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>IV Drip Administration</h3>
+                    <p>Professional IV drip services with medical grade equipment and certified professionals.</p>
+                    <div class="service-price">
+                        <span class="price">₹799</span>
+                        <span class="price-label">Starting</span>
+                    </div>
+                    <a href="#" class="btn btn-primary service-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        Book Now
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>ECG Test at Home</h3>
+                    <p>Complete ECG testing with digital reports delivered instantly to your phone.</p>
+                    <div class="service-price">
+                        <span class="price">₹999</span>
+                        <span class="price-label">Starting</span>
+                    </div>
+                    <a href="#" class="btn btn-primary service-btn ">
+                        <i class="fab fa-whatsapp"></i>
+                        Book Now
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h3>Nurse Visit at Home</h3>
+                    <p>Professional nurse visits for post-operative care, wound dressing, and monitoring.</p>
+                    <div class="service-price">
+                        <span class="price">₹499</span>
+                        <span class="price-label">Starting</span>
+                    </div>
+                    <a href="#" class="btn btn-primary service-btn">
+                        <i class="fab fa-whatsapp"></i>
+                       Book Now
+                    </a>
+                </div>
+
+			<div class="service-card">
+  		  <div class="service-icon">
+       		 <i class="fas fa-dumbbell"></i>
+    		</div>
+    			<h3>Physiotherapy at Home</h3>
+    			<p>Professional physiotherapy sessions for pain relief, injury recovery, and mobility improvement.</p>
+    			<div class="service-price">
+    			<span class="price">₹699</span>
+        		<span class="price-label">Starting</span>
+    		</div>
+   			 <a href="#" class="btn btn-primary service-btn">
+       			 <i class="fab fa-whatsapp"></i>
+		        Book Now
+		   </a>
+		</div>
+
+			<div class="service-card">
+    			<div class="service-icon">
+        		<i class="fas fa-vial"></i>
+    		</div>
+    			<h3>Blood Test at Home</h3>
+    			<p>Home sample collection for lab tests with quick and reliable reports.</p>
+   			<div class="service-price">
+        		<span class="price">₹499</span>
+        		<span class="price-label">Starting</span>
+    		</div>
+   			<a href="#" class="btn btn-primary service-btn">
+        		<i class="fab fa-whatsapp"></i>
+        		Book Now
+    </a>
+</div>
+
+		<div class="service-card">
+    		<div class="service-icon">
+        	<i class="fas fa-band-aid"></i>
+    		</div>
+    		<h3>Wound Dressing at Home</h3>
+   		<p>Safe wound care and dressing services by trained nurses at your home.</p>
+  		  <div class="service-price">
+        	<span class="price">₹399</span>
+        	<span class="price-label">Starting</span>
+    		</div>
+   		<a href="#" class="btn btn-primary service-btn">
+       		 <i class="fab fa-whatsapp"></i>
+        	Book Now
+    </a>
+</div>
+
+		<div class="service-card">
+    		<div class="service-icon">
+       		 <i class="fas fa-stethoscope"></i>
+    		</div>
+    		<h3>BP & Sugar Check</h3>
+    		<p>Quick blood pressure and blood sugar monitoring at home.</p>
+    		<div class="service-price">
+        	<span class="price">₹199</span>
+        	<span class="price-label">Starting</span>
+    </div>
+    		<a href="#" class="btn btn-primary service-btn">
+    		<i class="fab fa-whatsapp"></i>
+                Book Now
+    </a>
+</div>
+
+</div>
+</div>
+</section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Three simple steps to get healthcare at home</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-hand-pointer"></i>
+                    </div>
+                    <h3>Choose Your Service</h3>
+                    <p>Select the healthcare service you need from our list of professional services.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Confirm Details</h3>
+                    <p>Confirm your booking details via WhatsApp with our healthcare coordinators.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h3>Nurse Visits</h3>
+                    <p>A certified nurse visits your home at the scheduled time with all equipment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- WHY CHOOSE US SECTION --> 
+
+		<section class="why-us-section">
+    		<div class="container">
+
+       		<div class="section-header">
+            <h2 class="section-title">Why Patients Trust Us</h2>
+            <p class="section-subtitle">Safe, reliable and professional healthcare services at home</p>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <i class="fas fa-user-nurse"></i>
+                <h3>Certified Medical Staff</h3>
+                <p>All services are performed by trained and certified healthcare professionals.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-clock"></i>
+                <h3>Quick Response</h3>
+                <p>Fast booking and quick service availability across the city.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Safe & Hygienic</h3>
+                <p>Medical-grade equipment and strict hygiene protocols for every visit.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-home"></i>
+                <h3>Comfort of Home</h3>
+                <p>Get professional healthcare services without visiting hospitals.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+		<!--  STEPS TO FOLLOW SECTION ---->
+
+
+<section class="Steps to Follow">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title">Steps to Follow </h2>
+            <p class="section-subtitle">Get healthcare services at home in just 3 simple steps</p>
+        </div>
+
+        <div class="steps-grid">
+
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Book on WhatsApp</h3>
+                <p>Select your required service and book instantly via WhatsApp.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Confirm Appointment</h3>
+                <p>Our team confirms your booking and schedules a convenient time.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Service at Home</h3>
+                <p>Certified medical professionals visit your home to deliver the service.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+    <!-- Pricing & Transparency Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Transparent Pricing</h2>
+                <p class="section-subtitle">No hidden charges, just quality healthcare</p>
+            </div>
+            <div class="pricing-features">
+                <div class="pricing-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Transparent Pricing</span>
+                </div>
+                <div class="pricing-feature">
+                    <i class="fas fa-user-md"></i>
+                    <span>Certified Professionals</span>
+                </div>
+                <div class="pricing-feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Hygienic Equipment</span>
+                </div>
+                <div class="pricing-feature">
+                    <i class="fas fa-bolt"></i>
+                    <span>Quick Response Time</span>
+                </div>
+                <div class="pricing-feature">
+                    <i class="fas fa-file-medical"></i>
+                    <span>Digital Reports</span>
+                </div>
+                <div class="pricing-feature">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+
+<section class="booking-section">
+<div class="container">
+
+<div class="booking-wrapper">
+
+<div class="booking-info">
+
+<h2>Book Your Service</h2>
+
+<p>Fill in the details below and we'll connect you on WhatsApp to confirm your booking.</p>
+
+<ul>
+<li><i class="fas fa-check"></i> Instant WhatsApp Confirmation</li>
+<li><i class="fas fa-check"></i> Secure Payment Options</li>
+<li><i class="fas fa-check"></i> Trusted Healthcare Professionals</li>
+</ul>
+
+</div>
+
+<div class="booking-form">
+
+<input type="text" placeholder="Full Name">
+<input type="tel" placeholder="Phone Number">
+
+<select>
+<option>Select your city</option>
+<option>Nainital</option>
+<option>Haldwani</option>
+<option>Rudrapur</option>
+<option>Noida</option>
+<option>Ghazibad</option>
+</select>
+
+<select>
+<option>Select a service</option>
+<option>Injection at Home</option>
+<option>ECG Test</option>
+<option>IV Drip Administration</option>
+<option>Nurse Visit</option>
+<option>Physiotherapy</option>
+<option>Blood Test At Home </option>
+<option>Wound Dressing </option>
+<option>BP/Sugar Check</option>
+
+
+
+</select>
+
+<input type="date">
+<input type="time">
+
+<button>Book on WhatsApp</button>
+
+</div>
+
+</div>
+</div>
+</section>   
+
+
+ <!-- Payment Section -->
+    <section id="payment" class="payment-section">
+        <div class="container">
+            <div class="payment-content">
+                <div class="payment-info">
+                    <h2>Secure Your Booking</h2>
+                    <p>Pay a small booking fee to confirm your appointment. This ensures priority service and reserved time slot.</p>
+                    <div class="payment-features">
+                        <div class="payment-feature">
+                            <i class="fas fa-lock"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="payment-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>100% Safe</span>
+                        </div>
+                        <div class="payment-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Instant Confirmation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-action">
+                    <div class="booking-fee">
+                        <span class="fee-amount">₹199</span>
+                        <span class="fee-label">Booking Fee</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-large">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Pay ₹199 Booking Fee</span>
+                    </a>
+                    <p class="payment-note">After payment please share the screenshot on WhatsApp to confirm your booking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section id="service-area" class="service-area-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Service Available In</h2>
+                <p class="section-subtitle">We serve multiple cities across the region</p>
+            </div>
+            <div class="cities-grid">
+                <div class="city-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Delhi</span>
+                </div>
+                <div class="city-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Noida</span>
+                </div>
+                <div class="city-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Ghaziabad</span>
+</div>
+
+<div class="city-item">
+<i class="fas fa-map-marker-alt"></i>
+<span>Haldwani</span>
+</div>
+<div class="city-item">
+<i class="fas fa-map-marker-alt"></i>
+<span>Rudrapur</span>
+</div>
+<div class="city-item">
+<i class="fas fa-map-marker-alt"></i>
+<span>Nainital</span>
+</div>
+<div class="city-item">
+<i class="fas fa-map-marker-alt"></i>
+<span>Gurgaon</span>
+</div>
+<div class="city-item">
+<i class="fas fa-map-marker-alt"></i>
+<span>Faridabad</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+<div class="container">
+
+<div class="section-header">
+<h2 class="section-title">Contact Us</h2>
+<p class="section-subtitle">Need help? Reach out to us anytime</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-item">
+<i class="fas fa-phone"></i>
+<h3>Phone</h3>
+<p>+919818185270 </p>
+</div>
+
+<div class="contact-item">
+<i class="fab fa-whatsapp"></i>
+<h3>WhatsApp</h3>
+<p>Chat with us for instant booking</p>
+</div>
+
+<div class="contact-item">
+<i class="fas fa-envelope"></i>
+<h3>Email</h3>
+<p>support@homecarehealth.in</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-content">
+
+<div class="footer-about">
+<div class="logo">
+<i class="fas fa-heartbeat"></i>
+<span>HomeCare Health</span>
+</div>
+
+<p>
+Professional healthcare services at home including injections,
+IV drips, ECG tests and nurse visits. Our mission is to make
+healthcare accessible and convenient for patients.
+</p>
+
+</div>
+
+<div class="footer-links">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#how-it-works">How It Works</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+
+<div class="footer-services">
+<h3>Our Services</h3>
+<ul>
+<li>Injection at Home</li>
+<li>IV Drip Administration</li>
+<li>ECG Test at Home</li>
+<li>Nurse Visit at Home</li>
+<li>Physiotherapy at Home</li>
+<li>Blood Test at Home</li>
+<li>Wound Dressing at Home</li>
+<li>BP & Sugar Check</li>
+
+</ul>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 HomeCare Health. All rights reserved.</p>
+</div>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
