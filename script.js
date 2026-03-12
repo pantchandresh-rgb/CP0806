@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 3. Booking Form
     // ============================================
 
-    const bookingForm = document.getElementById("bookingForm");
+<!--    const bookingForm = document.getElementById("bookingForm");
 
     if (bookingForm) {
 
@@ -128,6 +128,8 @@ confirmMsg.remove();
         });
 
     }
+
+-->
 
 
     // ============================================
@@ -323,3 +325,46 @@ function calculatePrice() {
 },600);
 
 }
+
+// Booking Form → WhatsApp
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const bookingForm = document.getElementById("bookingForm");
+
+if (bookingForm) {
+
+bookingForm.addEventListener("submit", function(e) {
+
+e.preventDefault();
+
+const name = document.getElementById("name").value;
+const phone = document.getElementById("phone").value;
+const city = document.getElementById("city").value;
+const service = document.getElementById("service").value;
+const date = document.getElementById("date").value;
+const time = document.getElementById("time").value;
+
+const message =
+`📋 New Service Booking
+
+👤 Name: ${name}
+📞 Phone: ${phone}
+📍 City: ${city}
+🏥 Service: ${service}
+
+📅 Date: ${date}
+⏰ Time: ${time}`;
+
+const whatsappNumber = "919818185270"; // replace with your number
+
+const url =
+"https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+
+window.open(url, "_blank");
+
+});
+
+}
+
+});
