@@ -464,7 +464,10 @@ Get Price
 
     <!-- Booking Form Section -->
 
+<!-- Booking Form Section -->
+
 <section class="booking-section">
+
 <div class="container">
 
 <div class="booking-wrapper">
@@ -483,45 +486,51 @@ Get Price
 
 </div>
 
-<div class="booking-form">
 
-<input type="text" placeholder="Full Name">
-<input type="tel" placeholder="Phone Number">
+<form id="bookingForm" class="booking-form">
 
-<select>
-<option>Select your city</option>
+<input type="text" id="name" placeholder="Full Name" required>
+
+<input type="tel" id="phone" placeholder="Phone Number" required>
+
+<select id="city" required>
+<option value="">Select your city</option>
 <option>Nainital</option>
 <option>Haldwani</option>
 <option>Rudrapur</option>
 <option>Noida</option>
-<option>Ghazibad</option>
+<option>Ghaziabad</option>
 </select>
 
-<select>
-<option>Select a service</option>
+<select id="service" required>
+<option value="">Select a service</option>
 <option>Injection at Home</option>
 <option>ECG Test</option>
 <option>IV Drip Administration</option>
 <option>Nurse Visit</option>
 <option>Physiotherapy</option>
-<option>Blood Test At Home </option>
-<option>Wound Dressing </option>
+<option>Blood Test At Home</option>
+<option>Wound Dressing</option>
 <option>BP/Sugar Check</option>
-
-
-
 </select>
 
-<input type="date">
-<input type="time">
+<input type="date" id="date" required>
 
-<button>Book on WhatsApp</button>
+<input type="time" id="time" required>
+
+<button type="submit" class="btn">
+Book on WhatsApp
+</button>
+
+</form>
 
 </div>
 
 </div>
-</div>
-</section>   
+
+</section>
+
+
 
 
  <!-- Payment Section -->

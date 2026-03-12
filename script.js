@@ -100,9 +100,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 "?text=" +
                 encodeURIComponent(message);
 
-            window.open(url, "_blank");
+            window.open(whatsappUrl, "_blank");
 
-            showNotification("Redirecting to WhatsApp...", "success");
+const confirmMsg = document.createElement("div");
+
+confirmMsg.innerText = "Opening WhatsApp to confirm booking...";
+confirmMsg.style.position = "fixed";
+confirmMsg.style.bottom = "30px";
+confirmMsg.style.right = "30px";
+confirmMsg.style.background = "#28a745";
+confirmMsg.style.color = "#fff";
+confirmMsg.style.padding = "12px 18px";
+confirmMsg.style.borderRadius = "8px";
+confirmMsg.style.fontSize = "14px";
+confirmMsg.style.zIndex = "9999";
+
+document.body.appendChild(confirmMsg);
+
+setTimeout(function(){
+confirmMsg.remove();
+},3000);    
+
+        showNotification("Redirecting to WhatsApp...", "success");
 
             bookingForm.reset();
 
@@ -293,7 +312,14 @@ function calculatePrice() {
 
     const price = service * urgency;
 
-    document.getElementById("estimateResult").innerText =
-        "Estimated Price: ₹" + price;
+    const result = document.getElementById("estimateResult");
+
+   result.innerText = "Calculating price...";
+
+   setTimeout(function(){
+
+   result.innerText = "Estimated Price: ₹" + price.toLocaleString("en-IN");
+
+},600);
 
 }
